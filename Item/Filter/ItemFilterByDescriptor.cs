@@ -5,7 +5,7 @@ namespace DoveDraft.Item.Filter;
 /// <summary>
 /// Filters items by trying to match an item's descriptor to a certain descriptor.
 /// </summary>
-[Tool, GlobalClass]
+[Tool, GlobalClass, Icon("../../Icons/item_filter.png")]
 public partial class ItemFilterByDescriptor : ItemFilterBase
 {
     //

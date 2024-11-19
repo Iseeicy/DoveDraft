@@ -5,7 +5,7 @@ namespace DoveDraft.Item.Filter;
 /// <summary>
 /// Filters items by enforcing that any given item may not already have an item of the same type exist already in the given inventory.
 /// </summary>
-[Tool, GlobalClass]
+[Tool, GlobalClass, Icon("../../Icons/item_filter.png")]
 public partial class ItemFilterNoDuplicates : ItemFilterBase
 {
     //

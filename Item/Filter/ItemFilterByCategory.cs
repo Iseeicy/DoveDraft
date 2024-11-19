@@ -5,7 +5,7 @@ namespace DoveDraft.Item.Filter;
 /// <summary>
 /// Filters items using a RegEx on the category string of an item's descriptor.
 /// </summary>
-[Tool, GlobalClass]
+[Tool, GlobalClass, Icon("../../Icons/item_filter.png")]
 public partial class ItemFilterByCategory : ItemFilterBase
 {
     //

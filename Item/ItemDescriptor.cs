@@ -6,7 +6,7 @@ namespace DoveDraft.Item;
 /// <summary>
 /// Represents a certain type of item. Acts as a factory for ItemInstances of the item type it represents.
 /// </summary>
-[Tool, GlobalClass]
+[Tool, GlobalClass, Icon("../Icons/item_descriptor.png")]
 public partial class ItemDescriptor : Resource
 {
     //

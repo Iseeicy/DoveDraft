@@ -6,7 +6,7 @@ namespace DoveDraft.Item;
 /// <summary>
 ///  An inventory that can hold items in it. Actually adding and removing items to this inventory is not meant to be handled manually - see the ItemInstance class for that!
 /// </summary>
-[Tool, GlobalClass]
+[Tool, GlobalClass, Icon("../Icons/item_inventory.png")]
 public partial class ItemInventory : Node
 {
     //

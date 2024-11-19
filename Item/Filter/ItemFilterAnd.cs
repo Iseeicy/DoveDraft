@@ -6,7 +6,7 @@ namespace DoveDraft.Item.Filter;
 /// <summary>
 /// Filters items using a list of sub-filters. If an item passes through all the sub-filters, then it will pass through this filter. If an item fails to pass a SINGLE sub-filter, the item will be rejected.
 /// </summary>
-[Tool, GlobalClass]
+[Tool, GlobalClass, Icon("../../Icons/item_filter.png")]
 public partial class ItemFilterAnd : ItemFilterBase
 {
     //

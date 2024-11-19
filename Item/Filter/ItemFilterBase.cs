@@ -5,7 +5,7 @@ namespace DoveDraft.Item.Filter;
 /// <summary>
 /// The base class for all item filters. Not meant to be used directly.
 /// </summary>
-[Tool, GlobalClass]
+[Tool, GlobalClass, Icon("../../Icons/item_filter.png")]
 public partial class ItemFilterBase : Resource
 {
     //

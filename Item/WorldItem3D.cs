@@ -6,7 +6,7 @@ namespace DoveDraft.Item;
 /// <summary>
 /// The physical representation of an ItemInstance when placed into the game world. Has an identical API to WorldItem2D - but this is a 3D rigidbody instead.
 /// </summary>
-[GlobalClass]
+[GlobalClass, Icon("../Icons/world_item_2d.png")]
 public partial class WorldItem3D : RigidBody3D
 {
     //

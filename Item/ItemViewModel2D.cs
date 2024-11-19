@@ -6,7 +6,7 @@ namespace DoveDraft.Item;
 /// <summary>
 /// Represents an item's view model, which acts as a visual representation of an ItemInstance when it is currently being held by a player. Has an identical API to ItemViewModel3D - but this is a 2D node instead.
 /// </summary>
-[GlobalClass]
+[GlobalClass, Icon("../Icons/item_view_model.png")]
 public partial class ItemViewModel2D : Node2D
 {
     //

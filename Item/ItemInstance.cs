@@ -4,7 +4,7 @@ using Godot.Collections;
 
 namespace DoveDraft.Item;
 
-[Tool, GlobalClass]
+[Tool, GlobalClass, Icon("../Icons/item.png")]
 public partial class ItemInstance : Node
 {
     //

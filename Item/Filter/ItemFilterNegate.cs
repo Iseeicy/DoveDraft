@@ -5,7 +5,7 @@ namespace DoveDraft.Item.Filter;
 /// <summary>
 /// Filters items using some filter, but negates the result of the filter's evaluate function.
 /// </summary>
-[Tool, GlobalClass]
+[Tool, GlobalClass, Icon("../../Icons/item_filter.png")]
 public partial class ItemFilterNegate : ItemFilterBase
 {
     //

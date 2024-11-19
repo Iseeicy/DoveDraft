@@ -3,6 +3,7 @@ using Godot.Collections;
 
 namespace DoveDraft.Item;
 
+[GlobalClass, Icon("../Icons/item_view_model.png")]
 public partial class ItemScriptBase : Node
 {
     //

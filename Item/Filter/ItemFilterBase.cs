@@ -1,11 +1,11 @@
 using Godot;
 
-namespace DoveDraft.Item;
+namespace DoveDraft.Item.Filter;
 
 /// <summary>
 /// The base class for all item filters. Not meant to be used directly.
 /// </summary>
-[Tool]
+[Tool, GlobalClass]
 public partial class ItemFilterBase : Resource
 {
     //

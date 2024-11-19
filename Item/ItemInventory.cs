@@ -63,7 +63,7 @@ public partial class ItemInventory : Node
     /// <summary>
     /// OPTIONAL. The filter that items must pass in order to be added to this inventory.
     /// </summary>
-    [Export] public ItemFilterBase Filter { get; set; }
+    [Export] public Filter.ItemFilterBase Filter { get; set; }
 
     //
     //  Public Variables
@@ -390,6 +390,6 @@ public partial class ItemInventory : Node
     private bool DoesItemPassFilter(ItemInstance item)
     {
         if (Filter == null) return true;
-        return Filter.Evaluate(item, this) == ItemFilterBase.FilterResult.Pass;
+        return Filter.Evaluate(item, this) == Item.Filter.ItemFilterBase.FilterResult.Pass;
     }
 }

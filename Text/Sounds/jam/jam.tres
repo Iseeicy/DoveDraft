@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="TextReaderSettings" load_steps=6 format=3 uid="uid://bwqo1vv7iaoub"]
+
+[ext_resource type="Script" path="res://addons/DoveDraft/Text/TextReaderSettings.cs" id="1_mdu5d"]
+[ext_resource type="AudioStream" uid="uid://ctkpsi4vsqsep" path="res://addons/DoveDraft/Text/Sounds/jam/eng.ogg" id="2_71q14"]
+[ext_resource type="Script" path="res://addons/DoveDraft/Text/TextSounds.cs" id="3_j8pt1"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_w7aed"]
+random_pitch = 1.2
+streams_count = 1
+stream_0/stream = ExtResource("2_71q14")
+
+[sub_resource type="Resource" id="Resource_8nel3"]
+script = ExtResource("3_j8pt1")
+Default = SubResource("AudioStreamRandomizer_w7aed")
+
+[resource]
+script = ExtResource("1_mdu5d")
+CharacterShowDelay = 0.03
+PunctuationShowDelay = 0.4
+Sounds = SubResource("Resource_8nel3")

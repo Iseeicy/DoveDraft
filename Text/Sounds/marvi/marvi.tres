@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="TextSounds" load_steps=14 format=3 uid="uid://718c4m0voxmk"]
+
+[ext_resource type="AudioStream" uid="uid://dr2gmtiqg3s65" path="res://addons/DoveDraft/Text/Sounds/marvi/comma.ogg" id="1_j7sdf"]
+[ext_resource type="Script" path="res://addons/DoveDraft/Text/TextSounds.cs" id="1_jp2d5"]
+[ext_resource type="AudioStream" uid="uid://dewvvj7rtfjai" path="res://addons/DoveDraft/Text/Sounds/marvi/default.ogg" id="2_flotx"]
+[ext_resource type="AudioStream" uid="uid://boa2gyfcwqj0" path="res://addons/DoveDraft/Text/Sounds/marvi/default2.ogg" id="3_j1eg0"]
+[ext_resource type="AudioStream" uid="uid://84011jccfc3c" path="res://addons/DoveDraft/Text/Sounds/marvi/default3.ogg" id="4_q5fuu"]
+[ext_resource type="AudioStream" uid="uid://b5br7bssolbky" path="res://addons/DoveDraft/Text/Sounds/marvi/exclam.ogg" id="5_2m027"]
+[ext_resource type="AudioStream" uid="uid://y4ag3smk31xw" path="res://addons/DoveDraft/Text/Sounds/marvi/period.ogg" id="6_xn7il"]
+[ext_resource type="AudioStream" uid="uid://b3ninakyi4vbv" path="res://addons/DoveDraft/Text/Sounds/marvi/question.ogg" id="7_55mag"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qq5a0"]
+random_pitch = 1.2
+streams_count = 1
+stream_0/stream = ExtResource("1_j7sdf")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_70dnx"]
+random_pitch = 1.2
+streams_count = 3
+stream_0/stream = ExtResource("2_flotx")
+stream_1/stream = ExtResource("3_j1eg0")
+stream_2/stream = ExtResource("4_q5fuu")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_evyms"]
+random_pitch = 1.2
+streams_count = 1
+stream_0/stream = ExtResource("5_2m027")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_sphkv"]
+random_pitch = 1.2
+streams_count = 1
+stream_0/stream = ExtResource("6_xn7il")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_sba5i"]
+random_pitch = 1.2
+streams_count = 1
+stream_0/stream = ExtResource("7_55mag")
+
+[resource]
+script = ExtResource("1_jp2d5")
+Default = SubResource("AudioStreamRandomizer_70dnx")
+Period = SubResource("AudioStreamRandomizer_sphkv")
+Exclam = SubResource("AudioStreamRandomizer_evyms")
+Comma = SubResource("AudioStreamRandomizer_qq5a0")
+Question = SubResource("AudioStreamRandomizer_sba5i")

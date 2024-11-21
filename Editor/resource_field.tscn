@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://o6wkcmcnp3un"]
+
+[ext_resource type="Script" path="res://addons/DoveDraft/Editor/ResourceField.cs" id="1_bypwj"]
+[ext_resource type="Texture2D" uid="uid://bbntqtaemd1bo" path="res://addons/DoveDraft/Icons/down_arrow.png" id="2_ofexl"]
+[ext_resource type="PackedScene" uid="uid://dn4xvfhi0gsn1" path="res://addons/DoveDraft/Editor/quick_find_dialog.tscn" id="3_msf4f"]
+
+[node name="ResourceField" type="HBoxContainer"]
+script = ExtResource("1_bypwj")
+TargetResource = null
+_targetResource = null
+
+[node name="MenuButton" type="MenuButton" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "<empty>"
+item_count = 3
+popup/item_0/text = "Quick Find"
+popup/item_0/id = 0
+popup/item_1/text = "Load"
+popup/item_1/id = 1
+popup/item_2/text = "Clear"
+popup/item_2/id = 2
+popup/item_2/disabled = true
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="MenuButton"]
+title = "Quick Find"
+initial_position = 1
+ok_button_text = "Open"
+
+[node name="ArrowButton" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 8
+icon = ExtResource("2_ofexl")
+flat = true
+icon_alignment = 1
+
+[node name="QuickFindDialog" parent="." instance=ExtResource("3_msf4f")]
+_searchList = Object(ItemList,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"physics_interpolation_mode":2,"auto_translate_mode":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"clip_contents":true,"custom_minimum_size":Vector2(0, 0),"layout_direction":0,"layout_mode":2,"size_flags_horizontal":1,"size_flags_vertical":3,"size_flags_stretch_ratio":1.0,"localize_numeral_system":true,"tooltip_text":"","tooltip_auto_translate_mode":0,"focus_neighbor_left":NodePath(""),"focus_neighbor_top":NodePath(""),"focus_neighbor_right":NodePath(""),"focus_neighbor_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":2,"mouse_filter":0,"mouse_force_pass_scroll_events":true,"mouse_default_cursor_shape":0,"shortcut_context":null,"theme":null,"theme_type_variation":&"","select_mode":0,"allow_reselect":false,"allow_rmb_select":false,"allow_search":true,"max_text_lines":1,"auto_width":false,"auto_height":false,"text_overrun_behavior":3,"item_count":0,"max_columns":1,"same_column_width":false,"fixed_column_width":0,"icon_mode":1,"icon_scale":1.0,"fixed_icon_size":Vector2i(0, 0),"script":Resource("res://addons/DoveDraft/Editor/ResourceSearchList.cs"),"SearchQuery":"","_searchQuery":"","_defaultFilter":null)
+
+
+[connection signal="pressed" from="ArrowButton" to="." method="OnArrowButtonPressed"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ghb87k7v67ts"]
+
+[ext_resource type="Script" path="res://addons/DoveDraft/Text/TextReader.cs" id="1_82n36"]
+[ext_resource type="Script" path="res://addons/DoveDraft/Text/Examples/text_reader_label.gd" id="1_imxh2"]
+[ext_resource type="Script" path="res://addons/DoveDraft/Text/TextSpeaker.cs" id="2_sk7g3"]
+[ext_resource type="Resource" uid="uid://cuowl3cfnkix" path="res://addons/DoveDraft/Text/Sounds/Console/console.tres" id="4_p08sf"]
+
+[node name="TextReaderLabel" type="RichTextLabel"]
+bbcode_enabled = true
+visible_characters_behavior = 1
+script = ExtResource("1_imxh2")
+
+[node name="TextReader" type="Node" parent="."]
+script = ExtResource("1_82n36")
+
+[node name="TextSpeaker" type="Node" parent="."]
+script = ExtResource("2_sk7g3")
+DefaultSounds = ExtResource("4_p08sf")
+
+[connection signal="ReadingStarted" from="TextReader" to="TextSpeaker" method="_on_text_reader_reading_started"]
+[connection signal="TextChanged" from="TextReader" to="." method="_on_text_reader_text_changed"]
+[connection signal="VisibleCharsChanged" from="TextReader" to="." method="_on_text_reader_visible_chars_changed"]
+[connection signal="VisibleCharsChanged" from="TextReader" to="TextSpeaker" method="_on_text_reader_visible_chars_changed"]
